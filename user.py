@@ -97,6 +97,8 @@ class user:
         login_days = data['cache']['updated']['userLogin'][0]['seqLoginCount']
         total_days = data['cache']['updated']['userLogin'][0]['totalLoginCount']
         res = f'*{self.name_}*\n`登陆天数: {login_days}天 / {total_days}天\n'
+        
+        res += f"\n{data}\n"
 
         # 角色信息
         res += f'等级: {lv}\n石头: {stone}\n呼符: {ticket}\n'
